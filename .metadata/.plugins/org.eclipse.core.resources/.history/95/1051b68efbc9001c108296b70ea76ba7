@@ -1,0 +1,36 @@
+package com.example.demo.restcontroller;
+
+import java.util.UUID;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestHeader;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.example.demo.entity.DataEntity;
+import com.example.demo.request.DataRequest;
+import com.example.demo.service.DataService;
+
+@RestController
+public class DataRestController {
+
+	@Autowired
+	private DataService dataService;
+	
+	
+	@PostMapping("/store")
+	public ResponseEntity<DataEntity> storeData(
+			@RequestBody DataRequest dataRequest,@RequestHeader UUID id
+			 ){
+		 ResponseEntity<DataEntity> responseEntity=null;
+		 DataEntity dataEntity=null;
+		 DataEntity saveBody = dataService.saveData(dataRequest, id);
+		 
+		 responseEntity=new ResponseEntity<>(dataEntity,HttpStatus.CREATED);
+		 return responseEntity;
+	}
+	
+}

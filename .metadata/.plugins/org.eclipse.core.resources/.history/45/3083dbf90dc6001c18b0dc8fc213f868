@@ -1,0 +1,21 @@
+package com.example.demo.entity;
+
+import java.util.ArrayList;
+
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+import lombok.Data;
+
+@Data
+@Document(collection="data")
+public class DataEntity {
+
+	@Id
+	private Integer id;
+	private String specialCharacter;
+	private ArrayList<Integer> highestNumber;
+	private String validNumber;
+	
+	
+}

@@ -1,0 +1,19 @@
+package com.example.demo.entity;
+
+import java.util.ArrayList;
+
+import org.springframework.data.mongodb.core.mapping.Document;
+
+import lombok.Data;
+
+@Data
+@Document(collection="data")
+public class DataEntity {
+
+	
+	private String specialCharacter;
+	private ArrayList<Integer> highestNumber;
+	private String validNumber;
+	
+	
+}

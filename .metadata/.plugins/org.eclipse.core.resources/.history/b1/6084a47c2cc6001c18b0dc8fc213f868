@@ -1,0 +1,27 @@
+package com.example.demo.restcontroller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestHeader;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.example.demo.request.DataRequest;
+import com.example.demo.service.DataService;
+
+@RestController
+public class DataRestController {
+
+	@Autowired
+	private DataService dataService;
+	
+	@PostMapping("/store")
+	public ResponseEntity<String> storeData(
+			@RequestBody DataRequest dataRequest,@RequestHeader
+			 ){
+	
+		return null;
+	}
+	
+}

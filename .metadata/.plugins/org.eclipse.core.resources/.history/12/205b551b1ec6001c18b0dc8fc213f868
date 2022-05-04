@@ -1,0 +1,24 @@
+package com.example.demo.service;
+
+import java.util.UUID;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.example.demo.repository.DataRepository;
+import com.example.demo.request.DataRequest;
+
+@Service
+public class DataServiceImpl implements DataService {
+
+	@Autowired
+	private DataRepository dataRepository;
+	
+	
+	public String saveData(DataRequest dataRequest) {
+		UUID uuid=UUID.randomUUID();
+		
+		
+		return null;
+	}
+}

@@ -1,0 +1,54 @@
+package com.example.demo.service;
+
+import java.util.ArrayList;
+import java.util.Comparator;
+
+import org.springframework.beans.BeanUtils;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.example.demo.entity.DataEntity;
+import com.example.demo.repository.DataRepository;
+import com.example.demo.request.DataRequest;
+
+@Service
+public class DataServiceImpl implements DataService {
+
+	@Autowired
+	private DataRepository dataRepository;
+	
+	
+	public String saveData(DataRequest dataRequest) {
+		StringBuffer resultSpecialCharacter=new StringBuffer();
+		
+		String str=dataRequest.getSpecialCharacter();
+		
+	     resultSpecialCharacter=findSpecialCharacter(str);
+	     
+	     ArrayList<Integer> highestNumber = dataRequest.getHighestNumber();
+		DataEntity dataEntity=new DataEntity();
+		BeanUtils.copyProperties(dataRequest, dataEntity);
+		
+		return null;
+	}
+	
+	   private StringBuffer findSpecialCharacter(String str) {
+		StringBuffer letterOrDigit=new StringBuffer();
+		StringBuffer specialChar=new StringBuffer();
+		
+		for(int i=0; i<str.length();i++) {
+			if(!Character.isLetterOrDigit(str.charAt(i)))
+            specialChar.append(str.charAt(i));
+		}
+		return specialChar;
+	}
+	   
+	   static Integer findHighest(ArrayList<Integer> highestNumber) {
+		 
+		   
+		  return highestNumber.stream().max(Integer::compareTo).get();
+		  
+		  
+		 
+	   }
+}

@@ -1,0 +1,18 @@
+package com.example.demo.service;
+
+import java.util.UUID;
+
+import org.springframework.stereotype.Service;
+
+import com.example.demo.entity.DataEntity;
+import com.example.demo.request.DataRequest;
+
+
+public interface DataService  {
+
+	DataEntity saveData(DataRequest dataRequest, UUID id);
+
+	
+	
+	
+}

@@ -1,0 +1,25 @@
+package com.example.demo.request;
+
+import java.util.ArrayList;
+import java.util.UUID;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+import lombok.Data;
+
+@Data
+public class DataRequest {
+
+	private UUID uuid;
+	
+	@JsonProperty("specialCharacter")
+	private String specialCharacter;
+	
+	@JsonProperty("highestNumber")
+	private ArrayList<Integer> highestNumber;
+	
+	@JsonProperty("validNumber")
+	private Integer validNumber;
+	
+	
+}

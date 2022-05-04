@@ -1,0 +1,21 @@
+package com.example.demo.entity;
+
+import java.util.ArrayList;
+import java.util.UUID;
+
+import org.springframework.data.mongodb.core.mapping.Document;
+
+import lombok.Data;
+
+@Data
+@Document(collection="data")
+public class DataEntity {
+
+	
+	private UUID uuid;
+	private String specialCharacter;
+	private Integer highestNumber;
+	private String validNumber;
+	
+	
+}

@@ -1,0 +1,17 @@
+package com.example.demo.request;
+
+import java.util.ArrayList;
+import java.util.UUID;
+
+import lombok.Data;
+
+@Data
+public class DataRequest {
+
+	private UUID uuid;
+	private String specialCharacter;
+	private ArrayList<Integer> highestNumber;
+	private Integer validNumber;
+	
+	
+}

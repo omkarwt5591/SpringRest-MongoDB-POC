@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Change method &apos;DataEntity com.example.demo.service.DataService.saveData(DataRequest dataRequest, String id)&apos; to &apos;public DataEntity saveData(DataRequest dataRequest, String id)&apos;&#x0D;&#x0A;- Original project: &apos;demo&apos;&#x0D;&#x0A;- Original element: &apos;com.example.demo.service.DataService.saveData(...)&apos;&#x0D;&#x0A;- Changed parameters:&#x0D;&#x0A;     UUID id" delegate="false" deprecate="true" description="Change method &apos;saveData&apos;" flags="589830" id="org.eclipse.jdt.ui.change.method.signature" input="/src\/main\/java&lt;com.example.demo.service{DataService.java[DataService~saveData~QDataRequest;~QUUID;" name="saveData" parameter1="DataRequest dataRequest 0 DataRequest dataRequest false" parameter2="UUID id 1 String id false" stamp="1651500869827" version="1.0"/>
+</session>
